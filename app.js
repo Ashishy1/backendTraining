@@ -98,7 +98,7 @@ function makeBetweenFunc (min, max) {
      },
      {
          title: 'Inception',
-         score: 98
+         score: 45
      }
  ]
 
@@ -148,4 +148,36 @@ const  newMovies = movies.map(movie =>(
 ))
 
 
+  console.log("HELLO!!!!!...");
+  setTimeout(() => {
+      console.log("....are you still there?")
+  },2000)
+  console.log("GOODBYE");
+
+
+  //array.filter
+
+  const goodMovies = movies.map(m => m.title).filter(m =>m.score >80);
   
+  const UserNames = ['mark','margaretunterdankan', 'Bob', 'Krishnareddy', 'Gopalswamy'];
+   const validUserNames = UserNames.filter(m => m.length <10);
+
+
+
+   const prices = [9.99,1.50,5.66,2,6.33];
+    let total =0;
+    for (let price of prices){
+        total += price;
+    }
+    console.log(total);
+    
+    const total1 =prices.reduce((total, price) =>{
+        return total + price 
+    })
+
+     const highestRated = movies.reduce((bestMovie, currentMovie) =>{
+        if(currentMovie.score > bestMovie.score) {
+            return currentMovie;
+        }
+        return bestMovie;
+    })
